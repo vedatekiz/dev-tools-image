@@ -1,6 +1,8 @@
-FROM ubuntu:16.04
+FROM alpine:3.4
 
-# Install prerequisites
-RUN apt-get update && apt-get install -y \
-curl
+RUN apk update
+RUN apk add vim
+RUN apk add curl
+#RUN apt-get update && apt-get install -y \
+#curl
 CMD /bin/bash
